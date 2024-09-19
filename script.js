@@ -103,8 +103,16 @@
 // alert(a!==10)
 
 
-let a=10
-let b='10'
+// let a=10
+// let b='10'
 // alert(a==&& a>8)
 // alert(a==b||a>8)
-alert(!a==b)
+// alert(!a==b)
+
+
+function sample(){
+    alert{'welcome'}
+}
+function sample(){
+    alert{'welcome to all'}
+}
