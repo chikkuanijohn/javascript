@@ -1,6 +1,10 @@
-function sample(){
-    a=parseInt(document.getElementById("year").value)
-    b=parseInt(document.getElementById("salary").value)
-    c=parseInt(document.getElementById("bonous").value)
-
+function salary(){
+    e=parseInt(document.getElementById("expr").value)
+    y=parseInt(document.getElementById("salry").value)
+    if(y>5){
+        document.getElementById("h1").innerHTML=(y*0.05)+y
+    }
+    else{
+        document.getElementById("h1").innerHTML=y
+    }
 }
