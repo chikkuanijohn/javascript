@@ -10,12 +10,13 @@
 
 
 
-function factorial(){
+function fact(){
     i=1
     a=parseInt(document.getElementById("num").value)
-    factorial=1
+    fact=1
+    fact*=i
     do{
-        factorial*=i
+        
         
         console.log(i);
         i+=1
