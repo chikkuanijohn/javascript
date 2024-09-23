@@ -4,12 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./scriptform.js"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    name: <input type="text" id="name"><br>
-    phno: <input type="tel" id="phno"><br>
-    Email: <input type="email" id="email"><br>
-    <button >Submit</button>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background: rgb(29, 131, 172);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+            font-weight: bold;
+          
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0c3616;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0c3d17;
+        }
+        #phno_error {
+            color:rgb(182, 41, 41);
+            font-size: 12px;
+            margin-top: -10px; 
+            margin-bottom: 10px; 
+        }
+        #pincode_error{
+            color:rgb(179, 29, 29);
+            font-size: 12px;
+            margin-top: -10px; 
+            margin-bottom: 10px; 
+        } 
+    </style>
+    <div class="container">
+        <div class="back">
+            <div class="form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="phno">Phone Number:</label>
+                    <input type="tel" id="phno">
+                    <p id="num_error"></p>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email">
+                    <p id="email_error"></p>
+                </div>
+                <div class="form-group">
+                    <label for="pin">Pincode:</label>
+                    <input type="tel" id="pin">
+                    <p id="pin_error"></p>
+                </div>
+                <button onclick="valid()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="./scriptform.js"></script>
 </body>
 </html>
