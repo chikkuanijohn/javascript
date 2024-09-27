@@ -17,6 +17,8 @@ function display(){
         t_place.textContent=element.place
         t_row.appendChild(t_place)
 
+        
+//edit
         const edit_td=document.createElement('td')
         const edit_btn=document.createElement('button')
         edit_btn.textContent='edit'
@@ -26,13 +28,26 @@ function display(){
         edit_td.appendChild(edit_btn)
         t_row.appendChild(edit_td)
 
+        //delete
+
+        const del_td=document.createElement('td')
+        const del_btn=document.createElement('button')
+        del_btn.textContent='delete'
+        del_btn.onclick=function(){
+            delete_data(element.name)
+        }
+        del_td.appendChild(del_btn)
+        t_row.appendChild(del_td)
+
+
+
         t_var.appendChild(t_row)
 
 
         
     });
 }
-
+//add
 document.getElementById('submit_form').addEventListener('submit',function(event) {
     event.preventDefault() //remove refresh
     
@@ -61,6 +76,7 @@ function edit_frm(name){
     document.getElementById('e_place').value=edit_data.place
     
 }
+//edit submitbutton
 document.getElementById('edit_form').addEventListener('submit',function(event){
     event.preventDefault()
     const e_name=document.getElementById('e_name').value
@@ -77,5 +93,18 @@ document.getElementById('edit_form').addEventListener('submit',function(event){
     document.getElementById('submit_form').style.display='block'
     display()
 })
+
+
+function delete_data(name){
+    // console.log(name);
+    d=d.filter(user=>{
+        if(user.name!=name){
+            return user
+
+        }
+    })
+    display()
+    
+}
 
 display()
