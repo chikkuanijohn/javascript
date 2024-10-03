@@ -57,14 +57,15 @@
 // }
 // const a=setInterval(display,2000)
 
-let count=10
-let c=setInterval(function(){
-    console.log(count);
-    count--
-    if(count==0){
-        clearInterval(c)
-        console.log('complated');
+// let count=10
+// let c=setInterval(function(){
+//     console.log(count);
+//     count--
+//     if(count==0){
+//         clearInterval(c)
+//         console.log('completed');
         
-    }
+//     }
     
-},1000)
+// },1000)
+       

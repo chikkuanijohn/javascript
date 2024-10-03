@@ -1,0 +1,21 @@
+table {
+    width: 50%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #000;
+}
+
+th {
+    background-color:white;
+    color:black;
+} 
+#edit_form{
+    display: none;
+    
+}
+
+
